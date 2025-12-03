@@ -99,7 +99,11 @@ document.getElementById("langBtn").addEventListener("click", function () {
     this.dataset.lang = lang;
 
     // Update flag + text
-    document.getElementById("flagImg").src = lang === "mn" ? "flag.png" : "uk.png";
+    document.getElementById("flagImg").src =
+    lang === "mn"
+        ? "/static/flag.png"
+        : "/static/uk.png";
+
     document.getElementById("langText").textContent = lang.toUpperCase();
 
     // Save selection
@@ -108,3 +112,4 @@ document.getElementById("langBtn").addEventListener("click", function () {
     // Apply translation
     applyTranslation(lang);
 });
+
